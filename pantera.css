@@ -391,6 +391,381 @@ body::before {
   line-height: 1.6;
 }
 
+/* ── LOJAS PARCEIRAS ── */
+.partners-section {
+  width: 100%;
+  max-width: 880px;
+  text-align: center;
+  margin: 32px 0 24px;
+  z-index: 2;
+}
+
+.partners-title {
+  font-size: 11px;
+  color: var(--text-accent);
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(12px, 2.5vw, 24px);
+  flex-wrap: wrap;
+}
+
+.partner {
+  font-size: 14px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.partner:hover {
+  background: rgba(139, 60, 247, 0.06);
+  border-color: rgba(139, 60, 247, 0.2);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.partner i {
+  font-size: 16px;
+  color: var(--purple-light);
+}
+
+/* ── CONTAINER GENÉRICO DE SEÇÃO ── */
+.section-container {
+  width: 100%;
+  max-width: 880px;
+  background: rgba(17, 8, 36, 0.45);
+  border: 1px solid var(--purple-border);
+  border-radius: 22px;
+  padding: clamp(24px, 4vw, 40px);
+  margin-bottom: 32px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.section-container:hover {
+  border-color: rgba(139, 60, 247, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(139, 60, 247, 0.08);
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(28px, 4vw, 36px);
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--purple-light), transparent);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-top: -12px;
+  margin-bottom: 28px;
+}
+
+/* ── COMO FUNCIONA (STEPS) ── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  background: rgba(139, 60, 247, 0.05);
+  border-color: rgba(139, 60, 247, 0.25);
+  transform: translateY(-4px);
+}
+
+.step-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 44px;
+  line-height: 1;
+  color: rgba(168, 85, 247, 0.08);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.step-card:hover .step-num {
+  color: rgba(168, 85, 247, 0.25);
+}
+
+.step-card h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.step-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── OFERTAS RECENTES ── */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.offer-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+  background: rgba(139, 60, 247, 0.04);
+  border-color: rgba(139, 60, 247, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.offer-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bg-discount {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.bg-coupon {
+  background: rgba(234, 179, 8, 0.15);
+  color: #eab308;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.offer-icon {
+  font-size: 40px;
+  color: var(--purple-light);
+  margin-top: 12px;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover .offer-icon {
+  transform: scale(1.1);
+}
+
+.offer-title {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 12px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-price-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.price-old {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  text-decoration: line-through;
+}
+
+.price-new {
+  font-size: 20px;
+  color: #22c55e;
+  font-weight: 700;
+}
+
+.offer-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  background: rgba(139, 60, 247, 0.15);
+  border: 1px solid rgba(139, 60, 247, 0.3);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.offer-card:hover .offer-btn {
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.offer-btn i {
+  transition: transform 0.2s ease;
+}
+
+.offer-btn:hover i {
+  transform: translateX(3px);
+}
+
+/* ── FAQ ACCORDION ── */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item.active {
+  border-color: rgba(139, 60, 247, 0.3);
+  background: rgba(139, 60, 247, 0.03);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(15px, 2vw, 17px);
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: var(--purple-light);
+}
+
+.faq-question i {
+  font-size: 16px;
+  color: var(--text-accent);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+  padding: 0 22px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+  padding-bottom: 18px;
+}
+
+/* ── SHINE ANIMATION & REFINEMENTS ── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.18);
+  transform: rotate(30deg);
+  transition: none;
+  animation: shine 4s infinite linear;
+}
+
+@keyframes shine {
+  0% { left: -60%; }
+  15% { left: 130%; }
+  100% { left: 130%; }
+}
+
 /* ═══════════════════════════════
    RESPONSIVO — TABLET
 ═══════════════════════════════ */
@@ -453,6 +828,16 @@ body::before {
   .card-divider {
     display: block;
     order: 1.5;
+  }
+
+  .steps-grid,
+  .offers-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .offer-title {
+    height: auto;
   }
 }
 
