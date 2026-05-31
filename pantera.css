@@ -785,49 +785,52 @@ body::before {
   }
 
   .card-left {
-    order: 2;
-    padding: 28px 24px 32px;
+    padding: 36px 28px 44px;
   }
 
   .card-right {
-    order: 1;
-    width: 100%;
-    min-height: 240px;
-    max-height: 300px;
+    display: none;
   }
 
   .card-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 25%;
+    display: none;
   }
 
   .title-mundo,
   .title-tech {
-    font-size: clamp(48px, 12vw, 64px);
+    font-size: clamp(54px, 12vw, 72px);
   }
 
   .title-tech {
-    -webkit-text-stroke: 1.5px var(--purple);
+    -webkit-text-stroke: 1.8px var(--purple);
+  }
+
+  .desc,
+  .grupo {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 15px 24px;
+    font-size: 15px;
   }
 
   .btns {
     max-width: 100%;
   }
 
-  .desc,
-  .grupo {
-    max-width: 100%;
+  .feats {
+    gap: 12px;
   }
 
-  .feats {
-    gap: 10px;
+  .feat {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 
   .card-divider {
-    display: block;
-    order: 1.5;
+    display: none;
   }
 
   .steps-grid,
@@ -850,21 +853,30 @@ body::before {
   }
 
   .card-left {
-    padding: 22px 18px 26px;
+    padding: 28px 20px 32px;
   }
 
   .card-right {
-    min-height: 180px;
-    max-height: 220px;
+    display: none;
   }
 
   .title-mundo,
   .title-tech {
-    font-size: 42px;
+    font-size: clamp(44px, 13vw, 56px);
   }
 
   .title-tech {
-    -webkit-text-stroke: 1px var(--purple);
+    -webkit-text-stroke: 1.2px var(--purple);
+  }
+
+  .desc,
+  .grupo {
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 16px 20px;
+    font-size: 14.5px;
   }
 
   .members {
@@ -880,5 +892,7 @@ body::before {
 
   .feat {
     width: 100%;
+    font-size: 13.5px;
+    padding: 9px 18px;
   }
 }
